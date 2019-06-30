@@ -1,10 +1,10 @@
 <h3 class="my-5 text-primary">
   แฟรนไชส์ <span class="font-light">24 WASHLAUNDRY ( Package )</span>
 </h3>
-<div class="row packages">
+<div class="row packages justify-content-center">
   {{ with .Site.GetPage "/packages" }}
   {{ range $index, $page := .Pages }}
-  <div class="col-md-4">
+  <div class="col-lg-4 col-md-6 mb-3">
     <div class="package">
       <img
         class="speed-queen-logo"
