@@ -7,6 +7,15 @@
   p {
     text-shadow: 1px 1px 1px $gray-900;
   }
+  @include media-breakpoint-down(lg) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 
   .btn {
     font-weight: 500;
