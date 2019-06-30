@@ -19,10 +19,12 @@
     และอะไหล่สำรองไม่น้อยกว่า 10 ปี มีระบบสนับสนุนแฟรนไชส์ซี
     และระบบสนับสนุนลูกค้า "LAUNDROMAT"
   </p>
-  <h3 class="my-4 text-primary">
+  <h3 class="my-5 text-primary">
     แฟรนไชส์ <span class="font-light">24 WASHLAUNDRY ( Package )</span>
   </h3>
   <div class="row packages">
+    {{ with .Site.GetPage "/packages" }}
+    {{ range $index, $page := .Pages }}
     <div class="col-md-4">
       <div class="package">
         <img
@@ -30,61 +32,26 @@
           src="{{ `icons/speed-queen-logo.png` | relURL }}"
           alt="speed queen logo"
         />
-        <h4 class="text-primary">
-          <span class="font-light">LAUNDROMAT</span> Size S
-        </h4>
-        <img
-          src="{{ `imgs/s.jpg` | relURL }}"
-          alt="size s"
-          class="package-img"
-        />
-        <div class="download">
-          <img src="{{ `icons/download.svg` | relURL }}" alt="download" />
-          <div class="text-primary font-light">DOWNLOAD</div>
+        <div class="item">
+          <h4 class="text-primary">
+            <span class="font-light">LAUNDROMAT</span> Size {{ $page.Title }}
+          </h4>
+          {{ range first 1 (.Resources.ByType "image") }}
+          {{ $image := . }}
+          <img
+            src="{{ $image.RelPermalink }}"
+            alt="Size {{ $page.Title }}"
+            class="package-img"
+          />
+          {{ end }}
+          <div class="download">
+            <img src="{{ `icons/download.svg` | relURL }}" alt="download" />
+            <div class="text-primary font-light">DOWNLOAD</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="package">
-        <img
-          class="speed-queen-logo"
-          src="{{ `icons/speed-queen-logo.png` | relURL }}"
-          alt="speed queen logo"
-        />
-        <h4 class="text-primary">
-          <span class="font-light">LAUNDROMAT</span> Size M
-        </h4>
-        <img
-          src="{{ `imgs/m.jpg` | relURL }}"
-          alt="size m"
-          class="package-img"
-        />
-        <div class="download">
-          <img src="{{ `icons/download.svg` | relURL }}" alt="download" />
-          <div class="text-primary font-light">DOWNLOAD</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="package">
-        <img
-          class="speed-queen-logo"
-          src="{{ `icons/speed-queen-logo.png` | relURL }}"
-          alt="speed queen logo"
-        />
-        <h4 class="text-primary">
-          <span class="font-light">LAUNDROMAT</span> Size L
-        </h4>
-        <img
-          src="{{ `imgs/l.jpg` | relURL }}"
-          alt="size l"
-          class="package-img"
-        />
-        <div class="download">
-          <img src="{{ `icons/download.svg` | relURL }}" alt="download" />
-          <div class="text-primary font-light">DOWNLOAD</div>
-        </div>
-      </div>
-    </div>
+    {{ end }}
+    {{ end }}
   </div>
 </div>
