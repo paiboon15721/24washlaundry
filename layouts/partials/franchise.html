@@ -1,57 +1,20 @@
 <div class="franchise container text-center py-4">
-  <h2>การลงทุน</h2>
-  <h3 class="mt-2 mb-4 text-primary">ข้อดีของธุรกิจร้านซักผ้าหยอดเหรียญ</h3>
-  <h3 class="mt-2 mb-4 text-primary">
-    ทำไมต้องเลือกใช้ระบบแฟรนไชส์ 24 WASHLAUNDRY
-  </h3>
-  <p>
-    ทีมงานที่มีประสบการณ์ในการทำเครื่องซักผ้าอุตสาหกรรม
-    และมีความพร้อมในเรื่องการให้บริการด้านเทคนิค และฝึกอบรมบุคลากรต่าง ๆ
-    สามารถช่วยแนะนำวางแผนด้านการลงทุน ให้คำปรึกษาทางด้านการเงิน
-    รวมไปถึงการแนะนำผลิตภัณฑ์ เครื่องจักรที่เหมาะกับสถานที่ต่าง ๆ
-    และคัดเลือกสถานที่ในการเปิดร้าน
-    ช่วยเรื่องการวางแผนการตลาดและกลยุทธ์ทางการตลาด
-    ที่จะส่งเสริมให้แฟรนไชส์ซีประสบความสำเร็จ
-  </p>
-  <p>
-    มีเครื่องจักรทันสมัยที่ได้รับมาตรฐานทางการผลิต ISO และ CE ระดับสากล
-    ด้วยการรับประกันนาน 3 ปี พร้อมการซ่อมบำรุงตลอดอายุการใช้งาน
-    และอะไหล่สำรองไม่น้อยกว่า 10 ปี มีระบบสนับสนุนแฟรนไชส์ซี
-    และระบบสนับสนุนลูกค้า "LAUNDROMAT"
-  </p>
-  <h3 class="my-5 text-primary">
-    แฟรนไชส์ <span class="font-light">24 WASHLAUNDRY ( Package )</span>
-  </h3>
-  <div class="row packages">
-    {{ with .Site.GetPage "/packages" }}
-    {{ range $index, $page := .Pages }}
-    <div class="col-md-4">
-      <div class="package">
-        <img
-          class="speed-queen-logo"
-          src="{{ `icons/speed-queen-logo.png` | relURL }}"
-          alt="speed queen logo"
-        />
-        <div class="item">
-          <h4 class="text-primary">
-            <span class="font-light">LAUNDROMAT</span> Size {{ $page.Title }}
-          </h4>
-          {{ range first 1 (.Resources.ByType "image") }}
-          {{ $image := . }}
-          <img
-            src="{{ $image.RelPermalink }}"
-            alt="Size {{ $page.Title }}"
-            class="package-img"
-          />
-          {{ end }}
-          <div class="download">
-            <img src="{{ `icons/download.svg` | relURL }}" alt="download" />
-            <div class="text-primary font-light">DOWNLOAD</div>
-          </div>
-        </div>
-      </div>
+  {{ partial "franchise/pros" }}
+  {{ partial "franchise/why" }}
+  {{ partial "franchise/packages" . }}
+  <div class="row my-5">
+    <div class="col-md-6">
+      <h4 class="text-primary">สนใจลงทุน (ติดต่อ)</h4>
+      <p>
+        กรอกข้อมูลเพื่อให้ติดต่อกลับ <span class="text-primary">ติดต่อเรา</span>
+      </p>
     </div>
-    {{ end }}
-    {{ end }}
+    <div class="col-md-6">
+      <h4 class="text-success">ดาวน์โหลดเอกสาร</h4>
+      <p>
+        ดาวน์โหลด
+        <span class="text-success">เอกสารเพิ่มเติมสำหรับนักลงทุน</span>
+      </p>
+    </div>
   </div>
 </div>
