@@ -1,0 +1,11 @@
+$font-family-base: 'Kanit', sans-serif;
+
+$theme-colors: (
+  'primary': #f1431c,
+  'secondary': white,
+);
+
+$primary: map-get($theme-colors, primary);
+
+$enable-responsive-font-sizes: true;
+$spacer: 1.5rem;

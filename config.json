@@ -1,0 +1,20 @@
+{
+  "baseURL": "https://paiboon15721.github.io",
+  "languageCode": "en-us",
+  "title": "24washlaundry",
+  "params": {
+    "contact": {
+      "phone": "02 234 9999-05",
+      "line": "https://line.me/ti/p/~24washlaundry/",
+      "facebook": "https://www.facebook.com/24washlaundry/",
+      "email": "Contact@24washlaundry.com"
+    },
+    "menus": [
+      { "name": "home", "nameTH": "หน้าแรก" },
+      { "name": "about-us", "nameTH": "เกี่ยวกับเรา" },
+      { "name": "promotion", "nameTH": "โปรโมชั่น" },
+      { "name": "franchise", "nameTH": "แฟรนไชส์" },
+      { "name": "contact-us", "nameTH": "ติดต่อเรา" }
+    ]
+  }
+}

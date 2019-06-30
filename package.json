@@ -1,0 +1,17 @@
+{
+  "name": "24washlaundry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "rimraf public && hugo --minify && gh-pages -d public"
+  },
+  "author": "Paiboon Auengkongkatong",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
+    "postcss-cli": "^6.1.2",
+    "rimraf": "^2.6.3"
+  }
+}

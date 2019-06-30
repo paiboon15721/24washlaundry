@@ -1,0 +1,15 @@
+.home {
+  background-image: url('/imgs/banner.jpg');
+  background-size: cover;
+  color: $white;
+  h1,
+  h2,
+  p {
+    text-shadow: 1px 1px 1px $gray-900;
+  }
+
+  .btn {
+    font-weight: 500;
+    color: darken($primary, 15%);
+  }
+}
