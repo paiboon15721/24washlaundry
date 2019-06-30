@@ -1,0 +1,14 @@
+.contact-us {
+  background-image: url('/imgs/banner-2.jpg');
+  background-size: cover;
+
+  .map {
+    border-radius: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $white;
+  }
+}
