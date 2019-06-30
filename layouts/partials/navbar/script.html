@@ -1,0 +1,19 @@
+<script>
+  var $nav = $('.navbar')
+  var $logo = $('.navbar img')
+  var $navCollapse = $('.navbar-collapse')
+  $(document).scroll(function() {
+    var $notTop = $(this).scrollTop() > $nav.height()
+    $nav.toggleClass('bg-light', $notTop)
+    $nav.toggleClass('navbar-light', $notTop)
+    $nav.toggleClass('navbar-dark', !$notTop)
+    if ($notTop) {
+      $logo.attr('src', 'icons/logo.svg')
+    } else {
+      $logo.attr('src', 'icons/logo-w.svg')
+    }
+  })
+  $('main, footer').on('click', function() {
+    $navCollapse.collapse('hide')
+  })
+</script>

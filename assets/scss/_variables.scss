@@ -5,7 +5,11 @@ $theme-colors: (
   'secondary': white,
 );
 
+$white: #fff;
 $primary: map-get($theme-colors, primary);
 
 $enable-responsive-font-sizes: true;
 $spacer: 1.5rem;
+
+$nav-link-padding-x: 2rem !important;
+$navbar-dark-color: $white;
