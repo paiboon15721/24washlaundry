@@ -1,5 +1,9 @@
 {{ with .Site.GetPage "/promotions" }}
-<div id="promotion" class="promotion py-4">
+<div
+  id="promotion"
+  class="promotion py-4"
+  style="background-image: url('{{ `imgs/banner-2.jpg` | relURL }}')"
+>
   <div class="container">
     <div class="text-center">
       <h2 class="text-primary mb-4">โปรโมชั่น</h2>
