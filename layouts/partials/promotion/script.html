@@ -1,0 +1,18 @@
+<script>
+  new Swiper('.promotion-swiper-container > .swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    pagination: {
+      el: '.promotion-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 1,
+      },
+    },
+  })
+</script>

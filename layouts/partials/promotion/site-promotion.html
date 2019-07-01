@@ -1,0 +1,49 @@
+{{ with .Site.GetPage "/promotions" }}
+<div id="promotion" class="promotion py-4">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="text-primary mb-4">โปรโมชั่น</h2>
+    </div>
+    <div class="promotion-swiper-container">
+      <div class="swiper-container swiper-card-deck">
+        <div class="swiper-wrapper">
+          {{ range $index, $page := .Pages }}
+          <div class="swiper-slide card">
+            {{ range first 1 (.Resources.ByType "image") }}
+            {{ $image := . }}
+            {{ $image := $image.Resize "600x400 q50" }}
+            <img src="{{ $image.RelPermalink }}" class="card-img-top" />
+            {{ end }}
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ .Title }}
+              </h5>
+              <p class="card-text">
+                {{ .Content }}
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="card-text">
+                <small class="text-muted">
+                  {{ .Date.Format "January 2, 2006" }}
+                </small>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  <a
+                    data-fancybox-trigger="new-modal-{{ $index }}"
+                    href="javascript:;"
+                    >อ่านรายละเอียด</a
+                  >
+                </small>
+              </p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        <div class="swiper-pagination promotion-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

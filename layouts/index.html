@@ -1,10 +1,11 @@
 {{ define "content" }}
 {{ partial "home" }}
 {{ partial "about-us" }}
-{{ partial "promotion" . }}
+{{ partial "promotion/site-promotion" . }}
 {{ partial "franchise/index" . }}
 {{ partial "contact-us" . }}
 {{ end }}
 {{ define "javascript" }}
-{{ partial "scripts" }}
+{{ partial "script" }}
+{{ partial "promotion/script" }}
 {{ end }}

@@ -2,7 +2,61 @@
   background-image: url('/imgs/banner-2.jpg');
   background-size: cover;
 
-  img {
-    border-radius: 4rem;
+  .promotion-swiper-container {
+    .swiper-card-deck {
+      padding-bottom: 3rem;
+      .card {
+        border: 0;
+        border-radius: 1rem;
+        min-height: 30rem;
+        img {
+          border-radius: 1rem 1rem 0 0;
+        }
+
+        .card-title,
+        .card-text {
+          color: $primary;
+          font-size: 1rem;
+        }
+
+        .card-footer {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          background-color: transparent;
+          border: 0;
+        }
+      }
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-pagination {
+      &-bullet {
+        background: $primary;
+
+        &-active {
+          background: $primary;
+        }
+      }
+    }
   }
 }
