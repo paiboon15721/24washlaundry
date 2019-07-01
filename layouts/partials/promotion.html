@@ -2,27 +2,20 @@
   <div class="container text-center">
     <h2 class="text-primary mb-4">โปรโมชั่น</h2>
     <div class="row">
+      {{ with .Site.GetPage "/promotions" }}
+      {{ range $index, $page := .Pages }}
       <div class="col-md-4">
+        {{ range first 1 (.Resources.ByType "image") }}
+        {{ $image := . }}
         <img
-          src="{{ `imgs/promotion-1.jpg` | relURL }}"
+          src="{{ $image.RelPermalink }}"
           alt="promotion"
           class="img-fluid"
         />
+        {{ end }}
       </div>
-      <div class="col-md-4">
-        <img
-          src="{{ `imgs/promotion-1.jpg` | relURL }}"
-          alt="promotion"
-          class="img-fluid"
-        />
-      </div>
-      <div class="col-md-4">
-        <img
-          src="{{ `imgs/promotion-3.jpg` | relURL }}"
-          alt="promotion"
-          class="img-fluid"
-        />
-      </div>
+      {{ end }}
+      {{ end }}
     </div>
   </div>
 </div>
