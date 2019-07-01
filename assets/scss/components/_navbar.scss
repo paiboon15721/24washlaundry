@@ -4,4 +4,35 @@
   @include media-breakpoint-down(lg) {
     background-color: #fa6b2f;
   }
+  .navbar-nav {
+    a {
+      position: relative;
+      &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 0.3rem;
+        left: 50%;
+        position: absolute;
+        background: $gray-300;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+
+      &:hover:after {
+        width: 100%;
+        left: 0;
+      }
+      border: 0.3rem solid transparent;
+    }
+    .active {
+      font-weight: 700;
+      &:after {
+        width: 100%;
+        left: 0;
+        background: $primary;
+      }
+    }
+  }
 }
