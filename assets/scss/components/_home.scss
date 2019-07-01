@@ -1,4 +1,8 @@
 .home {
+  @include media-breakpoint-down(md) {
+    background-image: none !important;
+    background-color: #fa6b2f;
+  }
   background-size: cover;
   color: $white;
   h1,
