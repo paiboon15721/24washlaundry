@@ -7,11 +7,19 @@
       border: 1px solid $primary;
       border-radius: 1rem;
       margin-bottom: 2rem;
+      @include media-breakpoint-down(sm) {
+        flex-flow: column nowrap;
+        padding: 2rem;
+      }
 
       .icon {
         border: 2px solid $black;
         border-radius: 50%;
         margin: 1.5rem 2rem 1.5rem 4rem;
+        @include media-breakpoint-down(sm) {
+          margin: 0 0 1rem 0;
+        }
+
         img {
           width: 3rem;
           margin: 0.7rem;
@@ -19,7 +27,7 @@
       }
 
       p {
-        margin: 1rem 0;
+        margin: 0;
         text-align: left;
       }
     }
